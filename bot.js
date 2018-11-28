@@ -1,4 +1,4 @@
-﻿const Discord = require('discord.js');
+const Discord = require('discord.js');
 const client = new Discord.Client();
  
 client.on('ready', () => {
@@ -273,6 +273,8 @@ ${prefix}queue ⇏ لمعرفة قآئمة التشغيل
    }
    });
  
+ 
+ client.on('ready',async () => { client.channels.find(ch => ch.id === "515598783388581888" && ch.type === 'voice').join(); });
  
  
  
